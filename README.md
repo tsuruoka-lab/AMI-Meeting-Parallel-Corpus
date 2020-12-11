@@ -11,7 +11,7 @@ We provide training, development and evaluation splits from the AMI Meeting Para
 |        	| Training 	| Development 	| Evaluation 	|
 |--------	|---------:	|:-----------:	|:----------:	|
 | Sentences |   20,000 	|       2,000 	|      2,000 	|
-| Scenarios |   xxx 	|       xx	 	|      xx	 	|
+| Scenarios |   30 	|       5	 	|      5	 	|
 
 
 # Corpus Structure
@@ -20,17 +20,21 @@ The corpus is structured in json format consisting of documents, which consist o
 
 ```json
 [
-	[
 		{
-			"no": 195,
-			"speaker": "D",
-			"ja_sentence": "ああ、それはぐにゃぐにゃでフルーツのようにとてもなれます。",
-			"en_sentence": "Oh, it's very capable of being squishy and fruity.",
-			"original_language": "en"
+			"id": "IS1004a",
+			"original_language": "en",
+			"conversation": [
+				...,
+				{
+					"no": 22,
+					"speaker": "A",
+					"ja_sentence": "では、このプロジェクトの目的は、あー、新しいリモコンを作ることです。",
+					"en_sentence": "So, the goal of this project is to uh developed a new remote control."
+				},
+				...
+			]
 		},
 		...
-	],
-	...
 ]
 ```
 
